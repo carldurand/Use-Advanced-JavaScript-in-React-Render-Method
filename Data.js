@@ -1,19 +1,16 @@
-function whatIsInAName(collection, source) {
-  // "What's in a name? that which we call a rose
-  // By any other name would smell as sweet.”
-  // -- by William Shakespeare, Romeo and Juliet
-  var srcKeys = Object.keys(source);
-
-  // filter the collection
-  return collection.filter(function (obj) {
-    for(var i = 0; i < srcKeys.length; i++) {
-      if(!obj.hasOwnProperty(srcKeys[i]) || obj[srcKeys[i]] !== source[srcKeys[i]]) {
-        return false;
-      }
-    }
-    return true;
-  });
-}
-
-// test here
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+    
+    d3.select("body").selectAll("h2")
+      .data(dataset)
+      .enter()
+      .append("h2")
+      .text((d) => (d + " USD"))
+      // Add your code below this line
+      .style("font-family", "verdana");
+      
+      
+      // Add your code above this line
+  </script>
+</body>
