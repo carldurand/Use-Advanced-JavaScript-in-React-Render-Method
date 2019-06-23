@@ -8,7 +8,7 @@
       .append("h2")
       .text((d) => (d + " USD"))
       // Add your code below this line
-      .style("font-family", "verdana");
+      .style("color", d => d >= 20? "green" : "red");
       
       
       // Add your code above this line
