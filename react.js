@@ -1,10 +1,21 @@
-// change code below this line
-class MyComponent extends React.Component{
-render(){
-    return(
-      <h1>My First React Component!</h1>
-  
-    )
+
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
   }
-}
-ReactDOM.render(<MyComponent />,document.getElementById ('challenge-node'));
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        {/* change code below this line */}
+        <Fruits/>
+        <Vegetables/>
+        {/* change code above this line */}
+      </div>
+    );
+  }
+};
+
+// change code below this line
+ReactDOM.render(<TypesOfFood/>, document.getElementById
+('challenge-node'))
