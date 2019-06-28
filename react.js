@@ -22,4 +22,4 @@ class ControlledInput extends React.Component {
       </div>
     );
   }
-};
+}
