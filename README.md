@@ -1,20 +1,20 @@
-React: Create a Controlled Input
-Your application may have more complex interactions between state and the rendered UI. For example, form control elements for text input, such as input and textarea, maintain their own state in the DOM as the user types. With React, you can move this mutable state into a React component's state. The user's input becomes part of the application state, so React controls the value of that input field. Typically, if you have React components with input fields the user can type into, it will be a controlled input form.
+React: Use Advanced JavaScript in React Render Method
+In previous challenges, you learned how to inject JavaScript code into JSX code using curly braces, { }, for tasks like accessing props, passing props, accessing state, inserting comments into your code, and most recently, styling your components. These are all common use cases to put JavaScript in JSX, but they aren't the only way that you can utilize JavaScript code in your React components.
+
+You can also write JavaScript directly in your render methods, before the return statement, without inserting it inside of curly braces. This is because it is not yet within the JSX code. When you want to use a variable later in the JSX code inside the return statement, you place the variable name inside curly braces.
 
 
-The code editor has the skeleton of a component called ControlledInput to create a controlled input element. The component's state is already initialized with an input property that holds an empty string. This value represents the text a user types into the input field.
-
-First, create a method called handleChange() that has a parameter called event. When the method is called, it receives an event object that contains a string of text from the input element. You can access this string with event.target.value inside the method. Update the input property of the component's state with this new string.
-
-In the render method, create the input element above the h4 tag. Add a value attribute which is equal to the input property of the component's state. Then add an onChange() event handler set to the handleChange() method.
-
-When you type in the input box, that text is processed by the handleChange() method, set as the input property in the local state, and rendered as the value in the input box on the page. The component state is the single source of truth regarding the input data.
-
-Last but not least, don't forget to add the necessary bindings in the constructor.
+In the code provided, the render method has an array that contains 20 phrases to represent the answers found in the classic 1980's Magic Eight Ball toy. The button click event is bound to the ask method, so each time the button is clicked a random number will be generated and stored as the randomIndex in state. On line 52, delete the string "change me!" and reassign the answer const so your code randomly accesses a different index of the possibleAnswers array each time the component updates. Finally, insert the answer const inside the p tags.
 
 Passed
-ControlledInput should return a div element which contains an input and a p tag.
+The MagicEightBall component should exist and should render to the page.
 Passed
-The state of ControlledInput should initialize with an input property set to an empty string.
+MagicEightBall's first child should be an input element.
 Passed
-Typing in the input element should update the state and the value of the input, and the p element should render this state as you type.
+MagicEightBall's third child should be a button element.
+Passed
+MagicEightBall's state should be initialized with a property of userInput and a property of randomIndex both set to a value of an empty string.
+Passed
+When MagicEightBall is first mounted to the DOM, it should return an empty p element.
+Passed
+When text is entered into the input element and the button is clicked, the MagicEightBall component should return a p element that contains a random element from the possibleAnswers array.
